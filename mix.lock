@@ -1,0 +1,5 @@
+%{"cowboy": {:hex, :cowboy, "1.0.0"},
+  "cowlib": {:hex, :cowlib, "1.0.1"},
+  "plug": {:hex, :plug, "0.12.2"},
+  "ranch": {:hex, :ranch, "1.0.0"},
+  "spirit": {:git, "git://github.com/citrusbyte/spirit.git", "acf3b720ffef6fe6908cfe8b74ed7ba0ec717c16", []}}
