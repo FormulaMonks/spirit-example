@@ -6,17 +6,19 @@ A simple example of the Spirit web framework
 
 ## Create an elixir application from scratch
 
-    mix new sample_app
-    cd sample_app
+```
+mix new sample_app
+cd sample_app
+```
 
 Edit `mix.exs` file
 
 1. Add `:spirit` to OTP application structure
 
     ```elixir
-      def application do
-        [applications: [:spirit, :logger]]
-      end
+    def application do
+      [applications: [:spirit, :logger]]
+    end
     ```
 
 2. Add `:spirit` to deps
@@ -36,26 +38,26 @@ Edit `mix.exs` file
 
 Now, create your _controller/router_ inside your `lib` folder. It should look similar to
 
-    ```elixir
-    defmodule SampleApp do
-      use Spirit
+```elixir
+defmodule SampleApp do
+  use Spirit
 
-      get "/hello" do
-        send_resp(conn, 200, "<h1>Hello World!</h1>")
-      end
+  get "/hello" do
+    send_resp(conn, 200, "<h1>Hello World!</h1>")
+  end
 
-      match _ do
-        send_resp(conn, 404, "Not found :/")
-      end
-    end
-    ```
+  match _ do
+    send_resp(conn, 404, "Not found :/")
+  end
+end
+```
+
 
 Do not forget to add the application name to your `config.exs` file
 
 ```elixir
 config :spirit, app: SampleApp
 ```
-
 
 ## Start the application
 
